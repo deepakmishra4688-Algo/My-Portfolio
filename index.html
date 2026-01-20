@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deepak Mishra | Portfolio</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+  <canvas id="confetti-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;"></canvas>
+
+<nav class="navbar navbar-expand-lg animated-navbar sticky-top ">
+    <div class="container-fluid px-2 px-lg-4"> 
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="logo.png" alt="DM Logo" class="nav-logo-img me-2">
+            <span class="fw-bold text-white logo-text">Deepak<span class="text-accent">.dev</span></span>
+        </a>
+        
+        <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4">
+                <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="d-flex align-items-center gap-3 pe-lg-2">
+    <a href="https://www.facebook.com/share/1GEPkviDZT/" target="_blank" class="text-white nav-social">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://x.com/DeepakMiishra11" target="_blank" class="text-white nav-social">
+        <i class="fab fa-x-twitter"></i>
+    </a>
+    <a href="https://github.com/deepakmishra4688-Algo" target="_blank" class="text-white nav-social">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/deepak-mishra-48067a308" target="_blank" class="text-white nav-social">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    
+    <i class="fas fa-moon text-white ms-2" id="theme-icon" style="cursor:pointer;"></i>
+</div>
+</nav>
+
+ <section id="home" class="hero-section position-relative overflow-hidden">
+    
+    <div class="video-container">
+        <video autoplay loop muted playsinline class="hero-bg-video" data-aos="fade-down" data-aos-duration="2000">
+            <source src="bg-video.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div class="container position-relative z-index-hero">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-7" data-aos="fade-right" data-aos-delay="500">
+                <h1 class="display-3 fw-bold text-white mb-3">
+                    Hi, I'm <span class="text-accent">Deepak Mishra</span>
+                </h1>
+                <p class="lead text-light opacity-75 mb-4">
+                    I'm a front-end developer with experience in Website, Mobile and Software development. Check out my projects and skills.
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="#contact" class="btn btn-accent btn-lg px-4 rounded-pill">Hire Me</a>
+                    <a href="resume.pdf" class="btn btn-outline-light btn-lg px-4 rounded-pill">Resume</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-5 text-center" data-aos="zoom-in" data-aos-delay="800">
+                <div class="profile-container">
+                    <img src="profile.jpg" alt="Deepak" class="profile-morph-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <section id="projects" class="py-5">
+    <div class="container">
+      <h2 class="text-white mb-5" data-aos="fade-up">Featured Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="flip-left">
+          <div class="project-card-with-img">
+            <img src="ecommerce.jpg" alt="E-commerce" class="project-img">
+            <div class="project-overlay">
+              <div class="d-flex align-items-center mb-2">
+                <span class="status-dot"></span>
+                <small class="text-info fw-bold ms-2">Live Frontend</small>
+              </div>
+              <h4 class="text-white">E-Commerce Platform</h4>
+              <p class="text-light small">Modern shopping UI with product filtering and cart logic.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="flip-right">
+          <div class="project-card-no-img p-4 h-100 d-flex flex-column justify-content-center">
+            <i class="fab fa-spotify fa-4x text-success mb-3"></i>
+            <h4 class="text-white">Spotify Clone</h4>
+            <p class="text-secondary">Functional music player with custom progress bars and playlist management.</p>
+            <div class="mt-3">
+              <a href="https://github.com/deepakmishra4688-Algo/Spotify-Clone-main" target="_blank" class="btn btn-sm btn-outline-info rounded-pill">View Github <i class="fab fa-github ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="py-5 section-padding">
+  <div class="container">
+    <h2 class="text-white mb-5" data-aos="fade-up">My Tech Stack</h2>
+    <div class="row g-4">
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="bento-card p-4 h-100">
+          <h3 class="text-accent">Frontend Development</h3>
+          <p class="text-secondary">Building responsive and interactive UIs using modern frameworks and best practices.</p>
+          <div class="d-flex gap-3 mt-3">
+             <i class="fab fa-html5 fa-2x text-orange"></i>
+             <i class="fab fa-css3-alt fa-2x text-primary"></i>
+             <i class="fab fa-bootstrap fa-2x text-purple"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="bento-card p-4 h-100 text-center">
+          <i class="fab fa-js fa-3x text-warning mb-3"></i>
+          <h5 class="text-white">JavaScript</h5>
+          <p class="small text-secondary">ES6+, DOM Manipulation</p>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="bento-card p-4 h-100 text-center">
+          <i class="fab fa-react fa-3x text-info mb-3"></i>
+          <h5 class="text-white">React.js</h5>
+          <p class="small text-secondary">Frontend Framework</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5" data-aos="fade-up">
+          <h2 class="text-white mb-4">Let's Connect</h2>
+          <p class="text-secondary mb-4">I'm currently looking for new opportunities. Feel free to reach out via email or follow me on my social media.</p>
+          
+          <div class="d-flex align-items-center mb-3">
+            <div class="social-icon-circle me-3"><i class="fas fa-envelope text-accent"></i></div>
+            <span class="text-white">d2997201@gmail.com</span>
+          </div>
+
+          <div class="social-grid mt-4">
+            <a href="https://www.instagram.com/iamdeepak.miishra__2402?igsh=MnNnNHE5aXp4M2dv" target="_blank" class="social-box"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/DeepakMiishra11" target="_blank" class="social-box"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.facebook.com/share/1GEPkviDZT/" target="_blank" class="social-box"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/deepak-mishra-48067a308" target="_blank" class="social-box"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" title="Discord: shashimishra4688" class="social-box"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+          <div class="contact-form-container p-4 p-md-5">
+            <form class="needs-validation" novalidate action="mailto:d2997201@gmail.com" method="post" enctype="text/plain">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <input type="text" class="form-control bg-transparent text-white" placeholder="Full Name" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input type="email" class="form-control bg-transparent text-white" placeholder="Email Address" required>
+                </div>
+              </div>
+              <textarea class="form-control mb-3 bg-transparent text-white" rows="5" placeholder="Your Message" required></textarea>
+              <button type="submit" class="btn btn-primary w-100 py-3 rounded-pill">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<footer class="py-5 text-center border-top border-secondary mt-5">
+    <div class="container">
+        <p class="text-white mb-2">
+            &copy; 2026 <strong>Deepak Mishra</strong>. All Rights Reserved.
+        </p>
+        
+        <p class="text-secondary small mb-3">
+            Designed & Developed with privacy in mind. No user data is tracked or stored.
+        </p>
+
+        <div class="d-block mt-3">
+            <a href="javascript:void(0)" onclick="showPrivacy()" class="text-accent small text-decoration-none border border-accent px-3 py-1 rounded-pill">
+                <i class="fas fa-user-shield me-1"></i> Privacy & Ethics
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script>
+function showPrivacy() {
+    alert("Privacy Commitment:\n1. This site uses zero tracking cookies.\n2. Your contact info is never shared.\n3. Simple, secure, and transparent code.");
+}
+</script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // Animation ki speed (ms mein)
+    once: false     // Kya animation sirf ek baar hona chahiye?
+  });
+</script>
+</body>
+</html>
